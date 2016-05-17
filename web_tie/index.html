@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>gtradial_TH</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- warpper -->
+    <link href="css/970.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- width 970px -->
+  </head>
+  <body>
+    <div class="container-fluid" style="text-align:center; height:200px;">
+        
+        <div class="row" style="height:70px;">
+            <div class="warpper">
+                <div class="col-xs-12 col-md-7" style="line-height:70px; background: url(images/logo.png) no-repeat; background-position: 0px 17px; background-size:200px 36px; height:70px;"><!-- navbar-brand -->                  
+                </div>
+                <div class="col-xs-12 col-md-5" style="margin:15px 0px 15px 0px;">
+                  <ul class="nav nav-pills nav-justified" >
+                    <li role="presentation" class="active "><a href="#">หน้าหลัก</a></li>
+                    <li role="presentation" class=""><a href="#">สินค้า</a></li>
+                    <li role="presentation" class=""><a href="#">ดูแลรักษา</a></li>
+                    <li role="presentation" class=""><a href="#">เกี่ยวกับเรา</a></li>
+                  </ul>
+                </div>  
+            </div>     
+        </div><!--/row 1-->
+        
+
+    <div class="row"> 
+
+        <div id="slider1_container" style="visibility: hidden; position: relative; margin: 0 auto;
+        top: 0px; left: 0px; width: 1600px; height: 300px; overflow: hidden;">
+            <!-- Loading Screen -->
+            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+                <div style="position: absolute; display: block; background: url(images/loading.gif) no-repeat center center;
+                top: 0px; left: 0px; width: 100%; height: 100%;">
+                </div>
+            </div>
+            <!-- Slides Container -->
+            <div u="slides" style="cursor: grab; position: absolute; left: 0px; top: 0px; width: 1600px; height: 330px; overflow: hidden;">
+                <div>
+                    <img u="image" src2="images/silde-image-set/1.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/silde-image-set/2.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/silde-image-set/3.jpg" />
+                </div>
+                <div>
+                    <img u="image" src2="images/silde-image-set/4.jpg" />
+                </div>
+            </div>
+            
+            <!--#region Bullet Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+            <style>
+                /* jssor slider bullet navigator skin 21 css */
+                /*
+                .jssorb21 div           (normal)
+                .jssorb21 div:hover     (normal mouseover)
+                .jssorb21 .av           (active)
+                .jssorb21 .av:hover     (active mouseover)
+                .jssorb21 .dn           (mousedown)
+                */
+                .jssorb21 {
+                    position: absolute;
+                }
+                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                    position: absolute;
+                    /* size of bullet elment */
+                    width: 19px;
+                    height: 19px;
+                    text-align: center;
+                    line-height: 19px;
+                    color: white;
+                    font-size: 12px;
+                    background: url(images/slide_bullet.png) no-repeat;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .jssorb21 div { background-position: -5px -5px; }
+                .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -95px -5px; }
+                .jssorb21 .av { background-position: -65px -5px; }
+                .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -65px -5px; }
+            </style>
+            <!-- bullet navigator container -->
+            <div u="navigator" class="jssorb21" style="bottom: 5%; right: 6px;">
+                <!-- bullet navigator item prototype -->
+                <div u="prototype"></div>
+            </div>
+            <!--#endregion Bullet Navigator Skin End -->
+            
+            <!--#region Arrow Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+            <style>
+                /* jssor slider arrow navigator skin 21 css */
+                /*
+                .jssora21l                  (normal)
+                .jssora21r                  (normal)
+                .jssora21l:hover            (normal mouseover)
+                .jssora21r:hover            (normal mouseover)
+                .jssora21l.jssora21ldn      (mousedown)
+                .jssora21r.jssora21rdn      (mousedown)
+                */
+                .jssora21l, .jssora21r {
+                    display: block;
+                    position: absolute;
+                    /* size of arrow element */
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                    /*background-color: red;*/
+                    background: url(images/arrows.png) center center no-repeat;
+                    overflow: hidden;
+                }
+                .jssora21l { background-position: -3px 0px; }
+                .jssora21r { background-position: -35px 0px; }
+                /*.jssora21l:hover { background-position: -123px -33px; }
+                .jssora21r:hover { background-position: -183px -33px; }
+                .jssora21l.jssora21ldn { background-position: -243px -33px; }
+                .jssora21r.jssora21rdn { background-position: -303px -33px; }*/
+            </style>
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora21l" style="top: 50%; left: 1%;">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora21r" style="top: 50%; right: 1%;">
+            </span>
+            <!--#endregion Arrow Navigator Skin End -->            
+        </div>
+    <!-- Jssor Slider End -->
+    </div><!--/ row2-->
+    <div class="row" style="background-color:#f1f1f1; height:30px; line-height:30px;">
+
+    </div><!--/ row3--> 
+
+    <div class="row">
+        <div class="warpper">
+            <div class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/car-run.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    ด้วยประวัติความเป็นมาที่ยาวนาน พร้อมทั้งเครื่องมือ และอุปกรณ์ที่มีประสิทธิภาพในระดับสูง รวมถึง บุคลากรที่เปี่ยมด้วยคุณภาพ ทำให้สินค้าของ จีที เรเดียล เป็นที่ยอมรับในเรื่องของประสิทธิภาพจากผู้ใช้ ทั่วโลก
+                </div>
+
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px -151px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+
+            <div  class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/tire-care.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    เรียนรู้ข้อมูลเบื้องต้นที่ควรรู้เกี่ยวกับยาง การดูแลรักษา รวมถึงวิธีการใช้งานให้เต็มประสิทธิภาพและเกิดความ ปลอดภัยสูงสุด
+                </div>
+
+                 <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px -201px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+
+            <div class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/truck.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    ยางสำหรับงานบรรทุกเพื่อการค้าและพาณิชย์ ที่บรรทุกน้ำหนักได้มาก ประหยัดพลังงานเชื้อเพลิง และทนทาน ไว้ใจได้ในทุกระยะทาง
+                </div>
+
+                 <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px -251px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+        </div>
+    </div><!--/ row4-->
+
+    <div class="row">
+        <div class="warpper">
+            <div class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/IndonesiaPattern000171.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    <b>CHAMPIRO SX2:</b> สุดยอดยางรถยนต์ประสิทธิภาพสูง ที่ตอบสนองต่อการขับขี่ได้อย่างลงตัวบนพื้นถนนที่แห้งและเปียก
+                </div>
+
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px 0px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+
+            <div  class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/about.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    มื่อคุณใส่ยาง จีที เรเดียล กับรถคุณแล้ว จงมั่นใจได้ เลยว่าคุณได้ใช้ยางคุณภาพ ที่มีการควบคุมการผลิต อย่างเข้มข้น และทั่วถึง
+                </div>
+
+                 <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px -51px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+
+            <div class="col-xs-12 col-md-4" style="margin-top:30px;">
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; background-image:url('images/contact-us.jpg'); background-repeat : no-repeat; background-position: 50% 50%; background-size:100% 100%; height:174px;">
+                    
+                </div>
+                <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; height:100px; text-align:justify;">
+                    เมื่อคุณใส่ยาง จีที เรเดียล กับรถคุณแล้ว จงมั่นใจได้ เลยว่าคุณได้ใช้ยางคุณภาพ ที่มีการควบคุมการผลิต อย่างเข้มข้น และทั่วถึง
+                </div>
+
+                 <div class="container-fluid" style="padding-left:0px; padding-right:0px; margin-top:30px; cursor: pointer; background-image:url('images/botton.png'); background-repeat : no-repeat; background-position:0px -101px; background-size:293px 302px; height:51px;">                   
+                </div>
+            </div><!--/content-->
+        </div><!--/warrper-->
+    </div><!--/ row5-->
+    <div class="row" style="margin-top:30px; background-color:#f2565a; height:5px; line-height:5px;">        
+    </div><!--/ row6--> 
+    <div class="row" style="background-color:#f1f1f1;"> 
+        <div class="warpper" style="margin-top:30px;">  
+            <div class="col-xs-12 col-md-3" style="text-align:left;">
+                <b>สินค้า</b></br>
+                Passenger Car</br>
+                SUV/4X4</br>
+                Light Truck/Van</br>
+                Truck & Bus</br>
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:left;">
+                <b>ดูแลรักษา</b></br>
+                พื้นฐานของยาง</br>
+                ดูแลรักษา</br>
+                วิธีใช้</br>                
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:left;">
+                <b>เกี่ยวกับเรา</b></br>
+                ทำไมต้องเลือก?</br>
+                เกี่ยวกับ GT Radial</br>
+                ติดต่อเรา</br>                
+            </div>
+            <div class="col-xs-12 col-md-3" style="text-align:left;">
+                <div class="row"><b>ติดตาม</b></br></div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-4" style="width:24px; height:24px; background-image:url('images/sprites.png'); background-repeat : no-repeat; background-position: -0px -1559px; background-size:44px 1776px; height:24px;">
+                    </div>
+
+                    <div class="col-xs-12 col-md-4" style="width:24px; height:24px; background-image:url('images/sprites.png'); background-repeat : no-repeat; background-position: -0px -1585px; background-size:44px 1776px; height:24px;">
+                    </div>
+
+                    <div class="col-xs-12 col-md-4" style="width:24px; height:24px; background-image:url('images/sprites.png'); background-repeat : no-repeat; background-position: -0px -1611px; background-size:44px 1776px; height:24px;">
+                    </div>                                                                        
+                </div>                
+            </div>
+        </div><!--/warrper-->    
+    </div><!--/ row6--> 
+    <div class="row" style="background-color:#ebebeb; "> 
+        <div class="col-xs-12 col-md-12" style="margin-top:30px; margin-bottom:100px; height:30px; line-height:30px; text-align:center;">
+            © 2015 Giti Tire Pte. Ltd. All Rights Reserved |  Terms of Use  |  Privacy Policy  |  Site Map  
+        </div>     
+    </div><!--/ row7--> 
+
+    </div><!-- /.container-fluid -->
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- use jssor.slider.debug.js for debug -->
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var options = {
+                $FillMode: 2,                                       //[Optional] The way to fill image in slide, 0 stretch, 1 contain (keep aspect ratio and put all inside slide), 2 cover (keep aspect ratio and cover whole slide), 4 actual size, 5 contain for large image, actual size for small image, default value is 0
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,                    //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                $SlideDuration: 800,                               //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0,                           //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+              
+                $BulletNavigatorOptions: {                          //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                 //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 8,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1,                                //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                    $Scale: false                                   //Scales bullets navigator or not while slider scale
+                },
+
+                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+  </body>
+</html>

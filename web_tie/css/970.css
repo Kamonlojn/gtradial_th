@@ -1,0 +1,30 @@
+@media (min-device-width: 1000px) {
+  .warpper{
+    width:970px; 
+    margin:0 auto;
+  }
+  .row-height{
+    height:30px; 
+    line-height:30px; 
+    background-color:#f1f1f1;
+  }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 999px) {
+  .warpper{
+    width:100%; 
+    margin:0 auto;
+  }
+  .bg-color-gray{    
+    background-color:#f1f1f1;
+    height:10px; 
+    line-height:10px;
+  }
+  .bg-color-red{    
+    background-color:#f2565a;
+    height:30px; 
+    line-height:30px; 
+  }  
+}
+
