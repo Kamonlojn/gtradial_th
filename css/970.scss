@@ -1,5 +1,5 @@
 /*-------------- standart --------------*/
-$font-base: 2.1rem;
+$font-base: 2rem;
 $bg-color-1: #f1f1f1;
 $bg-color-2: #f2565a;
 $bg-color-3: #ebebeb; /* light Gray */
@@ -472,6 +472,7 @@ a {
 .dropdown-menu{
   li{
     padding:2.5px 5px;
+    font-size: 1.2em;
     a:hover, a:focus{
       @include border-radius ($radius-default);
       color: #ffffff;
