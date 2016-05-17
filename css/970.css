@@ -399,6 +399,15 @@ a {
       margin-left: -20px;
       margin-bottom: 10px; }
 
+.car-care-header {
+  cursor: pointer;
+  color: #446fb0;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 10px; }
+  .car-care-header:first-child {
+    margin-top: 5px; }
+
 .warpper-line-bottom {
   padding-bottom: 30px;
   border-bottom: 1px solid black; }
