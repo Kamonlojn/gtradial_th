@@ -70,7 +70,11 @@
 
     <div class="row">
         <div class="col-xs-12 col-md-12 header-product-catagory" style="">
-
+            <div class="warpper" style="padding:10px;">
+                <div class="col-md-2" style="background-color: rgba(4, 4, 4, 0.5); margin-bottom:10px; color:white; text-align:left;">
+                    <label style="font-size:50px;">ติดต่อเรา</label>
+                </div>
+            </div>
         </div>
     </div><!--/ row2-->
 
@@ -208,7 +212,7 @@
     </div><!--/ row6-->
     <div class="row row-footer-2" >
         <div class="col-xs-12 col-md-12">
-            
+
         </div>
     </div><!--/ row7-->
 
