@@ -500,6 +500,9 @@ a {
       display: block;
       list-style-image: url(../images/check.png);
       padding-left: 0px;
+      li {
+          font-weight: 200;
+      }
       li:first-child{
         font-size:20px;
         list-style-image: none;

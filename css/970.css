@@ -392,6 +392,8 @@ a {
     display: block;
     list-style-image: url(../images/check.png);
     padding-left: 0px; }
+    .list-product ul li {
+      font-weight: 200; }
     .list-product ul li:first-child {
       font-size: 20px;
       list-style-image: none;
